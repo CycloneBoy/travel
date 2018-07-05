@@ -2,6 +2,8 @@ package com.cycloneboy.travel;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -9,8 +11,18 @@ import org.springframework.test.context.junit4.SpringRunner;
 @SpringBootTest
 public class TravelApplicationTests {
 
+    private final Logger logger = LoggerFactory.getLogger(TravelApplicationTests.class);
+
+
 	@Test
 	public void contextLoads() {
 	}
+
+	@Test
+    public void testLogger(){
+        logger.debug("debug...");
+        logger.info("info...");
+        logger.error("error...");
+    }
 
 }

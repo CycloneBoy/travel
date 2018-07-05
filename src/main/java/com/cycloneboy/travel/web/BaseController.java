@@ -1,6 +1,7 @@
 package com.cycloneboy.travel.web;
 
 import com.cycloneboy.travel.util.tips.SuccessTip;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
