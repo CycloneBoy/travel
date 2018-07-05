@@ -1,7 +1,7 @@
-package com.cycloneboy.bookstore.service.search;
+package com.cycloneboy.travel.service.search;
 
-import com.cycloneboy.bookstore.entity.dto.ServiceMultiResult;
-import com.cycloneboy.bookstore.entity.dto.ServiceResult;
+import com.cycloneboy.travel.entity.dto.ServiceMultiResult;
+import com.cycloneboy.travel.entity.dto.ServiceResult;
 
 import java.util.List;
 
@@ -26,7 +26,7 @@ public interface SearchNews {
 
     /**
      * 查询新闻接口
-     * @param rentSearch
+     * @param newsSearch
      * @return
      */
     ServiceMultiResult<Long> query(NewsSearch newsSearch);

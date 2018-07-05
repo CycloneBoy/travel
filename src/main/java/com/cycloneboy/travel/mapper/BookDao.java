@@ -1,7 +1,8 @@
-package com.cycloneboy.bookstore.mapper;
+package com.cycloneboy.travel.mapper;
 
-import com.cycloneboy.bookstore.entity.Book;
+
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.cycloneboy.travel.entity.Book;
 import org.apache.ibatis.annotations.Mapper;
 
 /**

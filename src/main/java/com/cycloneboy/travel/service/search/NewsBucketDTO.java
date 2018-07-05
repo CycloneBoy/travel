@@ -1,4 +1,4 @@
-package com.cycloneboy.bookstore.service.search;
+package com.cycloneboy.travel.service.search;
 
 /**
  * Created by cycloneboy.

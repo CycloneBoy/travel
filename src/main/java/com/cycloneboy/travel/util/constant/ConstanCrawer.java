@@ -1,4 +1,4 @@
-package com.cycloneboy.bookstore.util.constant;
+package com.cycloneboy.travel.util.constant;
 
 import java.util.Random;
 

@@ -1,6 +1,6 @@
-package com.cycloneboy.bookstore.mapper;
+package com.cycloneboy.travel.mapper;
 
-import com.cycloneboy.bookstore.entity.Persons;
+import com.cycloneboy.travel.entity.Persons;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

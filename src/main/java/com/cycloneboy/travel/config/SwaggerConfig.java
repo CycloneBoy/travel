@@ -38,8 +38,8 @@ public class SwaggerConfig {
 
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
-                .title("travel Doc")
-                .description("Creditcard RESTful APIs文档")
+                .title("Travel APIs")
+                .description("Spring Boot中使用Swagger2构建RESTful APIs")
                 .termsOfServiceUrl("https://cycloneboy.com")
                 .contact(new Contact("CycloneBoy","https://cycloneboy.com","xxx@gmail.com"))
                 .version("1.0")

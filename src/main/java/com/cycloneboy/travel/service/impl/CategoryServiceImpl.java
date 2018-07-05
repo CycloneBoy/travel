@@ -1,8 +1,8 @@
-package com.cycloneboy.bookstore.service.impl;
+package com.cycloneboy.travel.service.impl;
 
-import com.cycloneboy.bookstore.entity.Category;
-import com.cycloneboy.bookstore.mapper.CategoryDao;
-import com.cycloneboy.bookstore.service.CategoryService;
+import com.cycloneboy.travel.entity.Category;
+import com.cycloneboy.travel.mapper.CategoryDao;
+import com.cycloneboy.travel.service.CategoryService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 

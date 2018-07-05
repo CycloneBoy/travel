@@ -1,16 +1,16 @@
-package com.cycloneboy.bookstore.web;
+package com.cycloneboy.travel.web;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 
-import com.cycloneboy.bookstore.entity.dto.ExecuteDTO;
-import com.cycloneboy.bookstore.entity.dto.PageQueryDTO;
-import com.cycloneboy.bookstore.entity.dto.PageResultDTO;
+import com.cycloneboy.travel.entity.dto.ExecuteDTO;
+import com.cycloneboy.travel.entity.dto.PageQueryDTO;
+import com.cycloneboy.travel.entity.dto.PageResultDTO;
 
-import com.cycloneboy.bookstore.entity.Persons;
-import com.cycloneboy.bookstore.service.PersonsService;
+import com.cycloneboy.travel.entity.Persons;
+import com.cycloneboy.travel.service.PersonsService;
 
 
 import io.swagger.annotations.ApiOperation;
@@ -32,7 +32,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018-03-24
  */
 @RestController
-@RequestMapping("/bookstore/persons")
+@RequestMapping("/travel/persons")
 public class PersonsController extends BaseController{
     Logger logger = LoggerFactory.getLogger(PersonsController.class);
 

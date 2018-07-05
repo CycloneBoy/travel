@@ -1,6 +1,6 @@
-package com.cycloneboy.bookstore.web;
+package com.cycloneboy.travel.web;
 
-import com.cycloneboy.bookstore.util.tips.SuccessTip;
+import com.cycloneboy.travel.util.tips.SuccessTip;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

@@ -1,4 +1,4 @@
-package com.cycloneboy.bookstore.util.tips;
+package com.cycloneboy.travel.util.tips;
 
 /**
  * 返回给前台的提示（最终转化为json形式）

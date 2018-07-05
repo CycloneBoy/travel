@@ -15,14 +15,14 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableScheduling
 @EnableSwagger2
 @RestController
-@MapperScan("com.cycloneboy.bookstore.entity.*")
+@MapperScan("com.cycloneboy.travel.entity.*")
 @SpringBootApplication
 public class TravelApplication extends SpringBootServletInitializer {
 
-	@Override
-	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-		return builder.sources(TravelApplication.class);
-	}
+//	@Override
+//	protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
+//		return builder.sources(TravelApplication.class);
+//	}
 
 	@RequestMapping("/")
 	public String home(){

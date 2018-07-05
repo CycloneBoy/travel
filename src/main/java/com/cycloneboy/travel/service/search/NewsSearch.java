@@ -1,11 +1,11 @@
-package com.cycloneboy.bookstore.service.search;
+package com.cycloneboy.travel.service.search;
 
 import lombok.Data;
 
 import java.util.Date;
 
 /**
- * @program: bookstore
+ * @program: travel
  * @description: 新闻请求参数结构体
  * @author: cycloneboy
  * @create:2018-04-09 00:47

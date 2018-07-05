@@ -1,6 +1,6 @@
-package com.cycloneboy.bookstore.service;
+package com.cycloneboy.travel.service;
 
-import com.cycloneboy.bookstore.entity.Persons;
+import com.cycloneboy.travel.entity.Persons;
 import com.baomidou.mybatisplus.service.IService;
 import org.springframework.stereotype.Service;
 

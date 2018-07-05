@@ -1,16 +1,16 @@
-package com.cycloneboy.bookstore.web;
+package com.cycloneboy.travel.web;
 
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.baomidou.mybatisplus.mapper.Wrapper;
 import com.baomidou.mybatisplus.plugins.Page;
 
-import com.cycloneboy.bookstore.entity.dto.ExecuteDTO;
-import com.cycloneboy.bookstore.entity.dto.PageQueryDTO;
-import com.cycloneboy.bookstore.entity.dto.PageResultDTO;
+import com.cycloneboy.travel.entity.dto.ExecuteDTO;
+import com.cycloneboy.travel.entity.dto.PageQueryDTO;
+import com.cycloneboy.travel.entity.dto.PageResultDTO;
 
-import com.cycloneboy.bookstore.entity.News;
-import com.cycloneboy.bookstore.service.NewsService;
+import com.cycloneboy.travel.entity.News;
+import com.cycloneboy.travel.service.NewsService;
 
 
 import io.swagger.annotations.ApiOperation;
@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @since 2018-04-05
  */
 @RestController
-@RequestMapping("/bookstore/news")
+@RequestMapping("/travel/news")
 public class NewsController {
     Logger logger = LoggerFactory.getLogger(NewsController.class);
 
@@ -116,9 +116,9 @@ public class NewsController {
 
         NewsPage=newsService.selectPage(NewsPage,ew);
 
-        int total = newsService.selectCount(ew);
-
-        logger.info("获取News总数：" + total);
+//        int total = newsService.selectCount(ew);
+//
+//        logger.info("获取News总数：" + total);
 
         logger.info("获取News列表：总数"+NewsPage.getRecords().size());
         return new PageResultDTO((long)NewsPage.getRecords().size(),NewsPage.getRecords());

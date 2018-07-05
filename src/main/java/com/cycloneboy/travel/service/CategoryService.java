@@ -1,6 +1,6 @@
-package com.cycloneboy.bookstore.service;
+package com.cycloneboy.travel.service;
 
-import com.cycloneboy.bookstore.entity.Category;
+import com.cycloneboy.travel.entity.Category;
 import com.baomidou.mybatisplus.service.IService;
 
 /**
