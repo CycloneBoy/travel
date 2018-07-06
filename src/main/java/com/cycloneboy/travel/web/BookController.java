@@ -159,7 +159,15 @@ public class BookController extends BaseController{
                 format(new Date())  + "_" + fileName ;
         logger.info("文件上传：" + fileName + "-->" + size + " --> " + filePath);
 
-        String path = "D:/upload/book/cover" ;
+        String fileType = fileName.substring(fileName.indexOf('.')).toLowerCase();
+
+        String path = "D:/web/nodeJs/travel/static/upload/cover" ;
+        if((fileType != "png") && (fileType != "jpg")  && (fileType != "jpeg") && (fileType != "bmp")) {
+            path = "D:/web/nodeJs/travel/static/upload/file" ;
+        }
+
+        logger.info("文件上传存储路径：" + path + "/" + filePath + "-->" + size + " --> " + fileType);
+
         File dest = new File(path + "/" + filePath);
         if(!dest.getParentFile().exists()){ //判断文件父目录是否存在
             dest.getParentFile().mkdir();
