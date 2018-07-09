@@ -10,10 +10,12 @@ import com.cycloneboy.travel.entity.dto.PageQueryDTO;
 import com.cycloneboy.travel.entity.dto.PageResultDTO;
 
 import com.cycloneboy.travel.entity.Timeline;
+import com.cycloneboy.travel.entity.dto.TimelineDTO;
 import com.cycloneboy.travel.service.TimelineService;
 
 
 import io.swagger.annotations.ApiOperation;
+import org.apache.http.impl.execchain.TunnelRefusedException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,9 @@ import org.springframework.web.bind.annotation.*;
 
 
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -153,6 +158,39 @@ public class TimelineController {
             return new ExecuteDTO(false,"登录失败：邮箱地址跟签到用户名不匹配，或您不是管理员签到用户",exitTimeline);
         }
         return new ExecuteDTO(true,"登录成功",exitTimeline);
+    }
+
+    /**
+     * 获取登录用户的Timeline列表
+     */
+    @ApiOperation(value = "获取登录用户的Timeline列表", notes = "获取登录用户的Timeline列表", httpMethod = "POST")
+    @PostMapping("loadUserTimeline")
+    public PageResultDTO getTimelineByUserId(@RequestBody PageQueryDTO params){
+
+        Page<Timeline> TimelinePage=new Page<>();
+        TimelinePage.setSize(params.getSize());
+        TimelinePage.setCurrent(params.getPage());
+
+        EntityWrapper<Timeline> ew = new EntityWrapper<>();
+        if(params.getQuery()!=null){
+            ew.setEntity(new Timeline());
+            ew.where("user_id = " + params.getQuery().toString() )
+              .orderBy("create_time", false);
+            logger.info("获取Timeline列表: 拼接条件查询: "+ew.getSqlSegment());
+
+        }
+
+        TimelinePage=timelineService.selectPage(TimelinePage,ew);
+
+        logger.info("获取登录用户的Timeline列表：总数"+TimelinePage.getRecords().size());
+
+        List<TimelineDTO> timelineDTOList = new ArrayList<>();
+        for (Timeline timeline :
+                TimelinePage.getRecords()) {
+           timelineDTOList.add(new TimelineDTO(timeline));
+        }
+
+        return new PageResultDTO((long)TimelinePage.getRecords().size(),timelineDTOList);
     }
 }
 

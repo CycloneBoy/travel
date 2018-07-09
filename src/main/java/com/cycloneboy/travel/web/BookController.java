@@ -150,6 +150,7 @@ public class BookController extends BaseController{
     @ApiOperation(value = "实现文件上传", notes = "实现文件上传", httpMethod = "POST")
     @RequestMapping(value = "fileupload",method = RequestMethod.POST)
     public ExecuteDTO fileUpload(@RequestBody MultipartFile file){
+        logger.info("开始上传文件：");
         if(file == null){
             return new ExecuteDTO(false,"文件上传失败：请选择文件","error");
         }
